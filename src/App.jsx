@@ -1,7 +1,7 @@
-import PrivacyPolicy from "./components/PrivacyPolicy";
+import Contact from "./components/Contact";
 
 function App() {
-  return <PrivacyPolicy />;
+  return <Contact />;
 }
 
 export default App;
