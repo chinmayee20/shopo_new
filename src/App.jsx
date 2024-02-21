@@ -1,7 +1,7 @@
-import PrivacyPolicy from "./components/PrivacyPolicy";
+import TrackingOrder from "./components/TrackingOrder";
 
 function App() {
-  return <PrivacyPolicy />;
+  return <TrackingOrder />;
 }
 
 export default App;
