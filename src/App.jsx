@@ -1,7 +1,7 @@
-import AllProductPage from "./components/AllProductPage";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
-  return <AllProductPage />;
+  return <PrivacyPolicy />;
 }
 
 export default App;
