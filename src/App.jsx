@@ -1,7 +1,7 @@
-import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsCondition from "./components/TermsCondition";
 
 function App() {
-  return <PrivacyPolicy />;
+  return <TermsCondition />;
 }
 
 export default App;

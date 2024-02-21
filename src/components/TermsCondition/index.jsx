@@ -1,7 +1,7 @@
 import PageTitle from "../Helpers/PageTitle";
 import Layout from "../Partials/Layout";
 
-export default function PrivacyPolicy() {
+export default function TermsCondition() {
   return (
     <Layout childrenClasses="pt-0 pb-0">
       <div className="terms-condition-page w-full bg-white pb-[30px]">
@@ -9,9 +9,9 @@ export default function PrivacyPolicy() {
           <PageTitle
             breadcrumb={[
               { name: "home", path: "/" },
-              { name: "Privacy Policy", path: "privacy-policy" },
+              { name: "Terms and condition", path: "/terms-conditions" },
             ]}
-            title="Privacy Policy"
+            title="Terms and Condition"
           />
         </div>
         <div className="w-full">
@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
             </div>
             <div className="content-item w-full mb-10">
               <h2 className="text-[18px] font-medium text-qblack mb-5">
-                2. Ecommerce Terms and Conditions Examples
+                2. Does My Online Shop Need Terms and Conditions?
               </h2>
               <p className="text-[15px] text-qgraytwo leading-7 mb-10">
                 While it’s not legally required for ecommerce websites to have a
@@ -78,7 +78,7 @@ export default function PrivacyPolicy() {
 
             <div className="content-item w-full mb-10">
               <h2 className="text-[18px] font-medium text-qblack mb-5">
-                3. Ecommerce Terms and Conditions Template [Free]
+                3. Protect Your Property
               </h2>
               <p className="text-[15px] text-qgraytwo leading-7">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
