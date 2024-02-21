@@ -1,7 +1,7 @@
-import PrivacyPolicy from "./components/PrivacyPolicy";
+import ProductsCompaire from "./components/ProductsCompaire";
 
 function App() {
-  return <PrivacyPolicy />;
+  return <ProductsCompaire />
 }
 
 export default App;
