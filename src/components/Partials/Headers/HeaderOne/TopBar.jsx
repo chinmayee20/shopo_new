@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Arrow from "../../../Helpers/icons/Arrow";
 import Selectbox from "../../../Helpers/Selectbox";
 
@@ -15,25 +14,25 @@ export default function TopBar({ className }) {
             <div className="topbar-nav">
               <ul className="flex space-x-6">
                 <li>
-                  <Link to="/">
+                  <a to="/">
                     <span className="text-xs leading-6 text-qblack font-500">
                       Account
                     </span>
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/tracking-order">
+                  <a to="/tracking-order">
                     <span className="text-xs leading-6 text-qblack font-500">
                       Track Order
                     </span>
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/faq">
+                  <a to="/faq">
                     <span className="text-xs leading-6 text-qblack font-500">
                       Support
                     </span>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Facebook from "../../../Helpers/icons/Facebook";
 import Instagram from "../../../Helpers/icons/Instagram";
 import Youtube from "../../../Helpers/icons/Youtube";
@@ -11,7 +10,7 @@ export default function Footer({ type }) {
           {/* logo area */}
           <div className="mb-[40px]">
             {type === 3 ? (
-              <Link to="/">
+              <a to="/">
                 <img
                   width="152"
                   height="36"
@@ -20,9 +19,9 @@ export default function Footer({ type }) {
                   }/assets/images/logo-3.svg`}
                   alt="logo"
                 />
-              </Link>
+              </a>
             ) : (
-              <Link to="/">
+              <a to="/">
                 <img
                   width="152"
                   height="36"
@@ -31,7 +30,7 @@ export default function Footer({ type }) {
                   }/assets/images/logo.svg`}
                   alt="logo"
                 />
-              </Link>
+              </a>
             )}
           </div>
           <div className="w-full h-[1px] bg-[#E9E9E9]"></div>
@@ -52,25 +51,25 @@ export default function Footer({ type }) {
               <div>
                 <ul className="flex flex-col space-y-4 ">
                   <li>
-                    <Link to="/about">
+                    <a to="/about">
                       <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                         About Us
                       </span>
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link to="/terms-condition">
+                    <a to="/terms-condition">
                       <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                         Terms Condition
                       </span>
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link to="/all-products">
+                    <a to="/all-products">
                       <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                         Best Products
                       </span>
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -79,31 +78,31 @@ export default function Footer({ type }) {
               <div>
                 <div className="mb-5">
                   <h6 className="text-[18] font-500 text-[#2F2F2F]">
-                    General Links
+                    General as
                   </h6>
                 </div>
                 <div>
                   <ul className="flex flex-col space-y-4 ">
                     <li>
-                      <Link to="/blogs">
+                      <a to="/blogs">
                         <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                           Blog
                         </span>
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="/tracking-order">
+                      <a to="/tracking-order">
                         <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                           Tracking Order
                         </span>
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="/become-saller">
+                      <a to="/become-saller">
                         <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                           Become Seller
                         </span>
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -117,25 +116,25 @@ export default function Footer({ type }) {
                 <div>
                   <ul className="flex flex-col space-y-4 ">
                     <li>
-                      <Link to="/flash-sale">
+                      <a to="/flash-sale">
                         <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                           Flash Sale
                         </span>
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="/faq">
+                      <a to="/faq">
                         <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                           FAQ
                         </span>
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="/about">
+                      <a to="/about">
                         <span className="text-[#9A9A9A] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
                           Support
                         </span>
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>

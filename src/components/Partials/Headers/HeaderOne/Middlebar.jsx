@@ -4,7 +4,6 @@ import ThinBag from "../../../Helpers/icons/ThinBag";
 import ThinLove from "../../../Helpers/icons/ThinLove";
 import ThinPeople from "../../../Helpers/icons/ThinPeople";
 import SearchBox from "../../../Helpers/SearchBox";
-import { Link } from "react-router-dom";
 
 export default function Middlebar({ className, type }) {
   return (
@@ -14,7 +13,7 @@ export default function Middlebar({ className, type }) {
           <div className="flex justify-between items-center h-full">
             <div>
               {type === 3 ? (
-                <Link to="/">
+                <a to="/">
                   <img
                     width="152"
                     height="36"
@@ -23,9 +22,9 @@ export default function Middlebar({ className, type }) {
                     }/assets/images/logo-3.svg`}
                     alt="logo"
                   />
-                </Link>
+                </a>
               ) : type === 4 ? (
-                <Link to="/">
+                <a to="/">
                   <img
                     width="152"
                     height="36"
@@ -34,9 +33,9 @@ export default function Middlebar({ className, type }) {
                     }/assets/images/logo-4.svg`}
                     alt="logo"
                   />
-                </Link>
+                </a>
               ) : (
-                <Link to="/">
+                <a to="/">
                   <img
                     width="152"
                     height="36"
@@ -45,7 +44,7 @@ export default function Middlebar({ className, type }) {
                     }/assets/images/logo.svg`}
                     alt="logo"
                   />
-                </Link>
+                </a>
               )}
             </div>
             <div className="w-[517px] h-[44px]">
@@ -53,11 +52,11 @@ export default function Middlebar({ className, type }) {
             </div>
             <div className="flex space-x-6 items-center">
               <div className="compaire relative">
-                <Link to="/products-compaire">
+                <a to="/products-compaire">
                   <span>
                     <Compair />
                   </span>
-                </Link>
+                </a>
                 <span
                   className={`w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] ${
                     type === 3 ? "bg-qh3-blue text-white" : "bg-qyellow"
@@ -67,11 +66,11 @@ export default function Middlebar({ className, type }) {
                 </span>
               </div>
               <div className="favorite relative">
-                <Link to="/wishlist">
+                <a to="/wishlist">
                   <span>
                     <ThinLove />
                   </span>
-                </Link>
+                </a>
                 <span
                   className={`w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] ${
                     type === 3 ? "bg-qh3-blue text-white" : "bg-qyellow"
@@ -82,11 +81,11 @@ export default function Middlebar({ className, type }) {
               </div>
               <div className="cart-wrapper group relative py-4">
                 <div className="cart relative cursor-pointer">
-                  <Link to="/cart">
+                  <a to="/cart">
                     <span>
                       <ThinBag />
                     </span>
-                  </Link>
+                  </a>
                   <span
                     className={`w-[18px] h-[18px] rounded-full  absolute -top-2.5 -right-2.5 flex justify-center items-center text-[9px] ${
                       type === 3 ? "bg-qh3-blue text-white" : "bg-qyellow"
@@ -103,11 +102,11 @@ export default function Middlebar({ className, type }) {
                 />
               </div>
               <div>
-                <Link to="/profile">
+                <a to="/profile">
                   <span>
                     <ThinPeople />
                   </span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

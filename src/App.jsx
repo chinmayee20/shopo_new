@@ -1,7 +1,7 @@
-import Routers from "./Routers";
+import Layout from "./components/Partials/Layout";
 
 function App() {
-  return <Routers />;
+  return <Layout />;
 }
 
 export default App;
