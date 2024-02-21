@@ -1,7 +1,7 @@
-import Layout from "./components/Partials/Layout";
+import AllProductPage from "./components/AllProductPage";
 
 function App() {
-  return <Layout />;
+  return <AllProductPage />;
 }
 
 export default App;
