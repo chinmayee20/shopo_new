@@ -1,7 +1,7 @@
-import PrivacyPolicy from "./components/PrivacyPolicy";
+import FourZeroFour from "./components/FourZeroFour";
 
 function App() {
-  return <PrivacyPolicy />;
+  return <FourZeroFour />;
 }
 
 export default App;
