@@ -12,7 +12,7 @@ import IcoPeople from "./icons/IcoPeople";
 import IcoReviewHand from "./icons/IcoReviewHand";
 import IcoSupport from "./icons/IcoSupport";
 
-import OrderTab from "./OrderTab";
+import Dashboard from "./Dashboard";
 
 export default function Profile() {
   const [switchDashboard, setSwitchDashboard] = useState(false);
@@ -172,7 +172,7 @@ export default function Profile() {
                 </div>
                 <div className="flex-1">
                   <div className="item-body dashboard-wrapper w-full">
-                  <OrderTab/>
+                  <Dashboard/>
                   </div>
                 </div>
               </div>
