@@ -12,7 +12,7 @@ import IcoPeople from "./icons/IcoPeople";
 import IcoReviewHand from "./icons/IcoReviewHand";
 import IcoSupport from "./icons/IcoSupport";
 
-import PasswordTab from "./PasswordTab";
+import PersonalInfo from "./PersonalInfo";
 
 export default function Profile() {
   const [switchDashboard, setSwitchDashboard] = useState(false);
@@ -69,7 +69,7 @@ export default function Profile() {
                             <IcoPeople />
                           </span>
                           <span className=" font-normal text-base">
-                            Parsonal Info
+                            Personal Info
                           </span>
                         </div>
                       </a>
@@ -163,7 +163,7 @@ export default function Profile() {
                             <IcoLogout />
                           </span>
                           <span className=" font-normal text-base">
-                            Logoout
+                            Logout
                           </span>
                         </div>
                       </a>
@@ -172,7 +172,7 @@ export default function Profile() {
                 </div>
                 <div className="flex-1">
                   <div className="item-body dashboard-wrapper w-full">
-                  <PasswordTab/>
+                  <PersonalInfo/>
                   </div>
                 </div>
               </div>
