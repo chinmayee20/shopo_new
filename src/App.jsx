@@ -1,7 +1,7 @@
-import PrivacyPolicy from "./components/PrivacyPolicy";
+import Profile from "./components/Profile";
 
 function App() {
-  return <PrivacyPolicy />;
+  return <Profile />;
 }
 
 export default App;
