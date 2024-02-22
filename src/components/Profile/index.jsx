@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import datas from "../../data/products.json";
 import BreadcrumbCom from "../../components/BreadcrumbCom";
 import Layout from "../../components/Partials/Layout";
 import IcoAdress from "./icons/IcoAdress";
@@ -12,15 +11,8 @@ import IcoPayment from "./icons/IcoPayment";
 import IcoPeople from "./icons/IcoPeople";
 import IcoReviewHand from "./icons/IcoReviewHand";
 import IcoSupport from "./icons/IcoSupport";
-import AddressesTab from "./tabs/AddressesTab";
-import Dashboard from "./tabs/Dashboard";
-import OrderTab from "./tabs/OrderTab";
-import PasswordTab from "./tabs/PasswordTab";
+
 import Payment from "./tabs/Payment";
-import ProfileTab from "./tabs/ProfileTab";
-import ReviewTab from "./tabs/ReviewTab";
-import SupportTab from "./tabs/SupportTab";
-import WishlistTab from "./tabs/WishlistTab";
 
 export default function Profile() {
   const [switchDashboard, setSwitchDashboard] = useState(false);
@@ -191,43 +183,7 @@ export default function Profile() {
                 </div>
                 <div className="flex-1">
                   <div className="item-body dashboard-wrapper w-full">
-                    {active === "dashboard" ? (
-                      <Dashboard />
-                    ) : active === "profile" ? (
-                      <>
-                        <ProfileTab />
-                      </>
-                    ) : active === "payment" ? (
-                      <>
-                        <Payment />
-                      </>
-                    ) : active === "order" ? (
-                      <>
-                        <OrderTab />
-                      </>
-                    ) : active === "wishlist" ? (
-                      <>
-                        <WishlistTab />
-                      </>
-                    ) : active === "address" ? (
-                      <>
-                        <AddressesTab />
-                      </>
-                    ) : active === "password" ? (
-                      <>
-                        <PasswordTab />
-                      </>
-                    ) : active === "support" ? (
-                      <>
-                        <SupportTab />
-                      </>
-                    ) : active === "review" ? (
-                      <>
-                        <ReviewTab products={datas.products} />
-                      </>
-                    ) : (
-                      ""
-                    )}
+                    <Payment />
                   </div>
                 </div>
               </div>
