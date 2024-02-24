@@ -2,7 +2,7 @@ import Star from "../svg/Star";
 import InputCom from "../InputCom";
 import PageTitle from "../PageTitle";
 import Layout from "../Layout";
-import { productBrands, productData,productRatings} from "../Constants";
+import { productBrands, productData, productRatings } from "../Constants";
 
 export default function ProductsCompaire() {
   return (
@@ -34,38 +34,43 @@ export default function ProductsCompaire() {
                       </p>
                     </div>
                   </td>
-                  {productData.map(product => (
-          <td className="product w-[235px] bg-white p-6 border-b border-r border-qgray-border">
-            <div className="w-full mb-[30px]">
-              <div className="w-full h-[44px]">
-                <InputCom
-                  type="text"
-                  placeholder="Search Product..."
-                  inputClasses="w-full h-full px-2"
-                >
-                  <div className="absolute right-2 z-10 bg-white" style={{ top: "calc(100% - 28px)" }}>
-                    <Star/>
-                  </div>
-                </InputCom>
-              </div>
-            </div>
-            <div className="product-img flex justify-center mb-3 ">
-              <div className="w-[161px] h-[161px]">
-                <img
-                  src={`${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/${product.image}`}
-                  alt=""
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-            <p className="text-center text-[15px] font-medium text-qblack leading-[24px] mb-2">
-              {product.name}
-            </p>
-            <p className="text-center text-[15px] font-medium text-qred leading-[24px]">
-              {product.price}
-            </p>
-          </td>
-      ))}
+                  {productData.map((product) => (
+                    <td className="product w-[235px] bg-white p-6 border-b border-r border-qgray-border">
+                      <div className="w-full mb-[30px]">
+                        <div className="w-full h-[44px]">
+                          <InputCom
+                            type="text"
+                            placeholder="Search Product..."
+                            inputClasses="w-full h-full px-2"
+                          >
+                            <div
+                              className="absolute right-2 z-10 bg-white"
+                              style={{ top: "calc(100% - 28px)" }}
+                            >
+                              <Star />
+                            </div>
+                          </InputCom>
+                        </div>
+                      </div>
+                      <div className="product-img flex justify-center mb-3 ">
+                        <div className="w-[161px] h-[161px]">
+                          <img
+                            src={`${
+                              import.meta.env.VITE_PUBLIC_URL
+                            }/src/assets/images/${product.image}`}
+                            alt=""
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      </div>
+                      <p className="text-center text-[15px] font-medium text-qblack leading-[24px] mb-2">
+                        {product.name}
+                      </p>
+                      <p className="text-center text-[15px] font-medium text-qred leading-[24px]">
+                        {product.price}
+                      </p>
+                    </td>
+                  ))}
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px]  px-[26px] align-top bg-[#FAFAFA]">
@@ -76,18 +81,25 @@ export default function ProductsCompaire() {
                     </div>
                   </td>
                   {productRatings.map((rating, index) => (
-        <td key={index} className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-          <div className="flex space-x-2 items-center">
-            <span className="text-[15px] font-medium text-qblack">{rating.rating}</span>
-            <div className="flex items-center">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} />
-              ))}
-            </div>
-            <span className="text-[13px] font-normal text-qgraytwo">({rating.count})</span>
-          </div>
-        </td>
-      ))}
+                    <td
+                      key={index}
+                      className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top"
+                    >
+                      <div className="flex space-x-2 items-center">
+                        <span className="text-[15px] font-medium text-qblack">
+                          {rating.rating}
+                        </span>
+                        <div className="flex items-center">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} />
+                          ))}
+                        </div>
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          ({rating.count})
+                        </span>
+                      </div>
+                    </td>
+                  ))}
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -97,14 +109,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      Apple MacBook Air 13"
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          Apple MacBook Air 13"
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
 
                 <tr className="table-row-wrapper">
@@ -115,12 +128,17 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {productBrands.map((brand,index)=>{
-                    return (<td key={index} className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      {brand}
-                    </span>
-                  </td>)
+                  {productBrands.map((brand, index) => {
+                    return (
+                      <td
+                        key={index}
+                        className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top"
+                      >
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          {brand}
+                        </span>
+                      </td>
+                    );
                   })}
                 </tr>
 
@@ -161,14 +179,16 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <div className="flex space-x-2 items-center">
-                      <span className="w-4 h-4 rounded-full bg-[#649EFF]"></span>
-                      <span className="w-4 h-4 rounded-full bg-[#BAFE90]"></span>
-                      <span className="w-4 h-4 rounded-full bg-[#FF7173]"></span>
-                    </div>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <div className="flex space-x-2 items-center">
+                          <span className="w-4 h-4 rounded-full bg-[#649EFF]"></span>
+                          <span className="w-4 h-4 rounded-full bg-[#BAFE90]"></span>
+                          <span className="w-4 h-4 rounded-full bg-[#FF7173]"></span>
+                        </div>
+                      </td>
+                    );
                   })}
                 </tr>
 
@@ -180,12 +200,14 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      Apple M1 chip with 8-core CPU and 7-core GPU
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          Apple M1 chip with 8-core CPU and 7-core GPU
+                        </span>
+                      </td>
+                    );
                   })}
                 </tr>
                 <tr className="table-row-wrapper">
@@ -196,14 +218,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      13.3-inch
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          13.3-inch
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -213,14 +236,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      8GB RAM
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          8GB RAM
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -230,14 +254,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      1TB 5400rpm SATA HDD
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          1TB 5400rpm SATA HDD
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -247,14 +272,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      Intel UHD Graphics 600
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          Intel UHD Graphics 600
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -264,14 +290,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      macOS
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          macOS
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -281,14 +308,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      Built-in 49.9‑watt‑hour
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          Built-in 49.9‑watt‑hour
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -298,14 +326,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      802.11ac Wi-Fi wireless
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          802.11ac Wi-Fi wireless
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -315,14 +344,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      5.0 wireless technology
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          5.0 wireless technology
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -332,14 +362,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      720p FaceTime HD camera
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          720p FaceTime HD camera
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
                 <tr className="table-row-wrapper">
                   <td className="w-[233px] px-[26px] align-top bg-[#FAFAFA]">
@@ -349,14 +380,15 @@ export default function ProductsCompaire() {
                       </h1>
                     </div>
                   </td>
-                  {[0,1,2,3].map(()=>{
-                    return (<td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
-                    <span className="text-[13px] font-normal text-qgraytwo">
-                      Stereo speakers
-                    </span>
-                  </td>)
+                  {[0, 1, 2, 3].map(() => {
+                    return (
+                      <td className="product w-[235px] bg-white px-6 border-r border-qgray-border pb-[20px] align-top">
+                        <span className="text-[13px] font-normal text-qgraytwo">
+                          Stereo speakers
+                        </span>
+                      </td>
+                    );
                   })}
-                  
                 </tr>
               </tbody>
             </table>
