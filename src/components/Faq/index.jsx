@@ -1,7 +1,7 @@
-import Accodion from "../Helpers/Accodion";
-import InputCom from "../Helpers/InputCom";
-import PageTitle from "../Helpers/PageTitle";
-import Layout from "../Partials/Layout";
+import Accodion from "../Accodion";
+import InputCom from "../InputCom";
+import PageTitle from "../PageTitle";
+import Layout from "../Layout";
 
 export default function Faq() {
   return (

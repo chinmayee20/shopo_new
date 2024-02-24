@@ -1,5 +1,5 @@
 export default function BreadcrumbCom({
-  paths = [{ name: "home", path: "/" }],
+  paths = [{ name: "home"}],
 }) {
   return (
     <>
@@ -7,9 +7,7 @@ export default function BreadcrumbCom({
         <div className="breadcrumb-wrapper font-400 text-[13px] text-qblack mb-[23px]">
           {paths.map((path) => (
             <span key={path.name}>
-              <a to={path.path}>
                 <span className="mx-1 capitalize">{path.name}</span>
-              </a>
               <span className="sperator">/</span>
             </span>
           ))}
