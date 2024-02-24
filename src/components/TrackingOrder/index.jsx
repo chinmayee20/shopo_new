@@ -1,6 +1,6 @@
-import InputCom from "../Helpers/InputCom";
-import PageTitle from "../Helpers/PageTitle";
-import Layout from "../Partials/Layout";
+import InputCom from "../InputCom";
+import PageTitle from "../PageTitle";
+import Layout from "../Layout";
 import Thumbnail from "./Thumbnail";
 
 export default function TrackingOrder() {
