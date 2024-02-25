@@ -1,7 +1,7 @@
-import HomeFour from "./components/HomeFour";
+import Home from './components/Home'
 
 function App() {
-  return <HomeFour />;
+  return <Home />;
 }
 
 export default App;
